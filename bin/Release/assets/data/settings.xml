@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+  <!-- SETTINGS -->
+  <settings>
+    <!-- The datafile to load -->
+    <datafile>tracker_ultima4_randomizer_01.xml</datafile>
+    
+    <!-- Scale everything by this amount -->
+    <scalefactor>1.0</scalefactor>
+  </settings>
+</root>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<root>
+  <!-- SETTINGS -->
+  <settings>
+    <rows>5</rows>
+    <columns>5</columns>
+    <background_color>black</background_color>
+  </settings>
+
+  <!-- RANDOM TEXT SELECTION -->
+  <!-- Ultima 9 Any% -->
+  <random_selection_text><text>DROWNED DURING BOOK SWIM</text></random_selection_text>
+  <random_selection_text><text>KILLED BY IOLO</text></random_selection_text>
+  <random_selection_text><text>DIED IN LAVA</text></random_selection_text>
+  <random_selection_text><text>DIED RANDOMLY IN THE VOID</text></random_selection_text>
+  <random_selection_text><text>STUCK NEAR JUSTICE BIRD</text></random_selection_text>
+  <random_selection_text><text>DEATH BY SEA MONSTER</text></random_selection_text>
+  <random_selection_text><text>CRASHED IN VALORIA</text></random_selection_text>
+  <random_selection_text><text>GAME CRASHED</text></random_selection_text>
+  <random_selection_text><text>SPIDER BOSS DID NOT SPAWN</text></random_selection_text>
+  <random_selection_text><text>PEGLEG KILLED THE RAT</text></random_selection_text>
+  <random_selection_text><text>DIED TO THE GOLEM IN VALORIA</text></random_selection_text>
+  <random_selection_text><text>DIED TO THE ARROW IN SHAME</text></random_selection_text>
+  <random_selection_text><text>BLOCKED BY NPC</text></random_selection_text>
+  <random_selection_text><text>ACCIDENTAL OOB</text></random_selection_text>
+  <random_selection_text><text>RESET FROM MISSED JUMP</text></random_selection_text>
+  <random_selection_text><text>ITEM RANDOMLY DELETED ITSELF</text></random_selection_text>
+  <random_selection_text><text>FELL OF MOUNTAIN</text></random_selection_text>
+  <random_selection_text><text>SOFTLOCK DURING DIALOG</text></random_selection_text>
+  <random_selection_text><text>FAILED WIZARD EYE CLIP</text></random_selection_text>
+  <random_selection_text><text>FAILED TRIGGER SKIP</text></random_selection_text>
+  <random_selection_text><text>MISSED HUMILITY JUMP</text></random_selection_text>
+  <random_selection_text><text>DIED TO ENEMY</text></random_selection_text>
+  <random_selection_text><text>FAILED DESTARD EXIT SKIP</text></random_selection_text>
+  <random_selection_text><text>TINY LEAPS</text></random_selection_text>
+  <random_selection_text><text>LOST CONTROL OF CHARACTER</text></random_selection_text>
+  <random_selection_text><text>NEVER HAPPENED BEFORE</text></random_selection_text>
+
+   <!-- ROW 0 -->
+  <object>
+    <name>r0c0</name>
+    <button>b00</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r0c1</name>
+    <button>b10</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r0c2</name>
+    <button>b20</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r0c3</name>
+    <button>b30</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r0c4</name>
+    <button>b40</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+ 
+
+  <!-- ROW 1 -->
+  <object>
+    <name>r1c0</name>
+    <button>b01</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r1c1</name>
+    <button>b11</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r1c2</name>
+    <button>b21</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r1c3</name>
+    <button>b31</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r1c4</name>
+    <button>b41</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  
+
+  <!-- ROW 2 -->
+  <object>
+    <name>r2c0</name>
+    <button>b02</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r2c1</name>
+    <button>b12</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r2c2</name>
+    <button>b22</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>false</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_logo_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_logo_01.png</image_off>
+  </object>
+  <object>
+    <name>r2c3</name>
+    <button>b32</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r2c4</name>
+    <button>b42</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+
+  <!-- ROW 3 -->
+  <object>
+    <name>r3c0</name>
+    <button>b03</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r3c1</name>
+    <button>b13</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r3c2</name>
+    <button>b23</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r3c3</name>
+    <button>b33</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r3c4</name>
+    <button>b43</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+
+  <!-- ROW 4 -->
+  <object>
+    <name>r4c0</name>
+    <button>b04</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r4c1</name>
+    <button>b14</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r4c2</name>
+    <button>b24</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r4c3</name>
+    <button>b34</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+  <object>
+    <name>r4c4</name>
+    <button>b44</button>
+    <leftclick>toggle</leftclick>
+    <rightclick>off</rightclick>
+    <use_random_text_selection>true</use_random_text_selection>
+    <use_random_image_selection>false</use_random_image_selection>
+    <image_on slot="0">/assets/images_bingo/bingo_u9_blank_01.png</image_on>
+    <image_off slot="0">/assets/images_bingo/bingo_u9_blank_01_grey.png</image_off>
+  </object>
+
+</root>
