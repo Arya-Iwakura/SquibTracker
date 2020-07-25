@@ -28,19 +28,90 @@ namespace SquibTracker
 
         public int rows = 8;
         public int columns = 8;
+        public System.Timers.Timer resizeTimer = new System.Timers.Timer(100) { Enabled = false };
 
         public MainWindow()
         {
             InitializeComponent();
-
+            resizeTimer.Elapsed += new ElapsedEventHandler(WindowResizeDone);
             gameData.PopulateObjectList(this);
             Reset();
+        }
 
+        private void WindowResizeDone(object sender, ElapsedEventArgs e)
+        {
+            resizeTimer.Stop();
         }
 
         private void WindowSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            //TODO: Future work to make window resizeable by dragging
+            resizeTimer.Stop();
+            resizeTimer.Start();
+
+            float scaleValue = 1.0f;
+
+            //TODO: Make this resizable on all axis
+            if (gameData.dataHasBeenRead)
+            {
+                float scaleCellSize = gameData.winCellSize;
+                Size newSize = e.NewSize;
+
+                if (this.Width > 0 && e.WidthChanged)
+                {
+                    scaleValue = (float)(this.Width / gameData.winWidth);
+                    scaleCellSize = (float)((newSize.Width - 16) / this.columns);
+                    this.Height = (float)(this.Width / gameData.winAspectRatio);
+                    //this.SizeToContent = SizeToContent.Height;
+                }
+                else if (this.Height > 0 && e.HeightChanged)
+                {
+                    //scaleValue = (float)(this.Height / gameData.winHeight);
+                    //scaleCellSize = (float)((newSize.Height - 38) / this.rows);
+                    //this.Width = (float)(this.Height * gameData.winAspectRatio);
+                }
+
+                if (scaleValue != 1.0 && scaleValue > 0 && scaleValue < 10)
+                {
+                    foreach (Object obj in maingrid.ColumnDefinitions)
+                    {
+                        ColumnDefinition col = obj as ColumnDefinition;
+                        if (col != null)
+                        {
+                            col.Width = new GridLength(scaleCellSize);
+                        }
+                    }
+                    foreach (Object obj in maingrid.RowDefinitions)
+                    {
+                        RowDefinition row = obj as RowDefinition;
+                        if (row != null)
+                        {
+                            row.Height = new GridLength(scaleCellSize);
+                        }
+                    }
+                    foreach (GameData.ObjectDef def in gameData.objectList)
+                    {
+                        foreach (Image img in def.offImageList)
+                        {
+                            img.Width = scaleCellSize;
+                            img.Height = scaleCellSize;
+                        }
+                        foreach (Image img in def.onImageList)
+                        {
+                            img.Width = scaleCellSize;
+                            img.Height = scaleCellSize;
+                        }
+                    }
+
+                    foreach (Object obj in maingrid.Children)
+                    {
+                        TextBlock textBlock = obj as TextBlock;
+                        if (textBlock != null)
+                        {
+                            textBlock.FontSize = gameData.winFontSize * scaleValue;
+                        }
+                    }
+                }
+            }
         }
 
         private void ProcessObjectName(Button button, string arg1)

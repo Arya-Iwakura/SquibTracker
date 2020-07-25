@@ -6,6 +6,6 @@
         xmlns:local="clr-namespace:SquibTracker"
         mc:Ignorable="d"
         Background="Black"
-        Title="SquibTracker" MinHeight="256" MinWidth="256" SizeToContent="WidthAndHeight" SizeChanged="WindowSizeChanged" ResizeMode="NoResize">
+        Title="SquibTracker" MinHeight="128" MinWidth="128" SizeToContent="WidthAndHeight" SizeChanged="WindowSizeChanged">
     <Grid Margin="0,0,0,0" Name="maingrid"></Grid>
 </Window>

@@ -312,7 +312,7 @@
     <button>b13</button>
     <leftclick>toggle</leftclick>
     <rightclick>off</rightclick>
-    <text>SCALE OF EXODUS</text>
+    <text>SCALE OF&#10;EXODUS</text>
     <use_random_text_selection>false</use_random_text_selection>
     <use_random_image_selection>false</use_random_image_selection>
     <image_on slot="0">/assets/images_ultima4/tracker_u4_scaleofexodus_02.png</image_on>
@@ -356,7 +356,7 @@
     <button>b53</button>
     <leftclick>toggle</leftclick>
     <rightclick>off</rightclick>
-    <text>&#10;&#10;&#10;AVATAR ARMOR</text>
+    <text>AVATAR&#10;ARMOR</text>
     <use_random_text_selection>false</use_random_text_selection>
     <use_random_image_selection>false</use_random_image_selection>
     <image_on slot="0">/assets/images_ultima4/tracker_u4_avatararmor_02.png</image_on>
@@ -367,7 +367,7 @@
     <button>b63</button>
     <leftclick>toggle</leftclick>
     <rightclick>off</rightclick>
-    <text>AVATAR WEAPON</text>
+    <text>AVATAR&#10;WEAPON</text>
     <use_random_text_selection>false</use_random_text_selection>
     <use_random_image_selection>false</use_random_image_selection>
     <image_on slot="0">/assets/images_ultima4/tracker_u4_avatarweapon_02.png</image_on>
@@ -378,7 +378,7 @@
     <button>b73</button>
     <leftclick>toggle</leftclick>
     <rightclick>off</rightclick>
-    <text>AVATARHOOD ACHIEVED</text>
+    <text>AVATARHOOD&#10;ACHIEVED</text>
     <use_random_text_selection>false</use_random_text_selection>
     <use_random_image_selection>false</use_random_image_selection>
     <image_on slot="0">/assets/images_ultima4/tracker_u4_avatarhood_02.png</image_on>

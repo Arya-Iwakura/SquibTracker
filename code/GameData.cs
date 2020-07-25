@@ -19,15 +19,17 @@ namespace SquibTracker
         public Random rng = new Random();
 
         public float winScaleFactor;
-        public int winWidth;
-        public int winHeight;
-        public int winCellSize;
+        public float winWidth;
+        public float winHeight;
+        public float winCellSize;
         public string winDataFile;
-        public int winFontSize;
+        public float winFontSize;
         public string winFontVAlign;
         public string winFontHAlign;
         public float winAspectRatio;
         public float currentAspectRatio;
+
+        public bool dataHasBeenRead = false;
 
         public void ReadXMLData(MainWindow win)
         {
@@ -45,6 +47,8 @@ namespace SquibTracker
             RandomizeRandomTextList();
             ReadLabelNodes(doc, win);
             ReadObjectNodes(doc, win);
+
+            dataHasBeenRead = true;
         }
 
         public void ReadSettingFile(XmlDocument doc, MainWindow win)
@@ -69,8 +73,10 @@ namespace SquibTracker
         {
             int rows = 5;
             int columns = 5;
-            int windowBorderWidth = 16;
-            int windowBorderHeight = 38;
+            //float windowBorderWidth = 16;
+            //float windowBorderHeight = 38;
+            float windowBorderWidth = 0;
+            float windowBorderHeight = 0;
             string colorString = "black";
 
             XmlNodeList settingNodeList = doc.SelectNodes("//settings");
@@ -93,35 +99,24 @@ namespace SquibTracker
 
                 if (settingsNode.SelectSingleNode(".//cellsize") != null)
                 {
-                    winCellSize = int.Parse(settingsNode.SelectSingleNode(".//cellsize").InnerText);
+                    winCellSize = float.Parse(settingsNode.SelectSingleNode(".//cellsize").InnerText);
                 }
 
                 if (settingsNode.SelectSingleNode(".//fontsize") != null)
                 {
-                    winFontSize = int.Parse(settingsNode.SelectSingleNode(".//fontsize").InnerText);
+                    winFontSize = float.Parse(settingsNode.SelectSingleNode(".//fontsize").InnerText);
                 }
 
-                if (settingsNode.SelectSingleNode(".//fontsize") != null)
+                if (settingsNode.SelectSingleNode(".//fontvalign") != null)
                 {
                     winFontVAlign = settingsNode.SelectSingleNode(".//fontvalign").InnerText;
                 }
 
-                if (settingsNode.SelectSingleNode(".//fontsize") != null)
+                if (settingsNode.SelectSingleNode(".//fonthalign") != null)
                 {
                     winFontHAlign = settingsNode.SelectSingleNode(".//fonthalign").InnerText;
                 }
             }
-
-            winWidth = (int)(winWidth * winScaleFactor);
-            winHeight = (int)(winHeight * winScaleFactor);
-            winCellSize = (int)(winCellSize * winScaleFactor);
-            winFontSize = (int)(winFontSize * winScaleFactor);
-
-            win.Width = winWidth;
-            win.Height = winHeight;
-
-            Application.Current.MainWindow.Height = (rows * winCellSize) + windowBorderHeight;
-            Application.Current.MainWindow.Width = (columns * winCellSize) + windowBorderWidth;
 
             Object color = null;
             try
@@ -130,7 +125,7 @@ namespace SquibTracker
             }
             catch (Exception ex)
             {
-                //throw new FormatException($"string {colorString} does not reprsent a valid color", ex);
+                throw new FormatException($"string {colorString} does not reprsent a valid color", ex);
             }
             if (color == null)
             {
@@ -146,13 +141,24 @@ namespace SquibTracker
             if (columns < 1) { columns = 1; }
             if (columns > 100) { columns = 100; }
 
+            winCellSize = (float)(winCellSize * winScaleFactor);
+            winFontSize = (float)(winFontSize * winScaleFactor);
+
             win.rows = rows;
             win.columns = columns;
 
             CreateGrid(win, rows, columns, winCellSize);
+
+            Application.Current.MainWindow.Height = (rows * winCellSize) + windowBorderHeight;
+            Application.Current.MainWindow.Width = (columns * winCellSize) + windowBorderWidth;
+            winHeight = (rows * winCellSize) + windowBorderHeight;
+            winWidth = (columns * winCellSize) + windowBorderWidth;
+
+            winAspectRatio = winWidth / winHeight;
+            currentAspectRatio = winAspectRatio;
         }
 
-        public void CreateGrid(MainWindow win, int inRows, int inColumns, int inCellSize)
+        public void CreateGrid(MainWindow win, int inRows, int inColumns, float inCellSize)
         {
             win.maingrid.Margin = new Thickness(0);
 
@@ -160,6 +166,7 @@ namespace SquibTracker
             {
                 ColumnDefinition col = new ColumnDefinition();
                 col.Width = new GridLength(inCellSize);
+                //col.Width = GridLength.Auto;
                 win.maingrid.ColumnDefinitions.Add(col);
             }
 
@@ -167,6 +174,7 @@ namespace SquibTracker
             {
                 RowDefinition row = new RowDefinition();
                 row.Height = new GridLength(inCellSize);
+                //row.Height = GridLength.Auto;
                 win.maingrid.RowDefinitions.Add(row);
             }
 
@@ -229,7 +237,7 @@ namespace SquibTracker
                     textBlock.TextWrapping = TextWrapping.Wrap;
                     textBlock.Background = Brushes.Transparent;
                     textBlock.Foreground = Brushes.White;
-                    textBlock.Padding = new Thickness(5);
+                    textBlock.Padding = new Thickness(0);
                     textBlock.Text = "";
                     textBlock.IsHitTestVisible = false;
 
@@ -365,10 +373,11 @@ namespace SquibTracker
             bitImg.UriSource = new Uri(path);
             bitImg.EndInit();
             img.Source = bitImg;
-
+            img.Stretch = Stretch.Uniform;
             img.Width = winCellSize;
             img.Height = winCellSize;
             img.IsHitTestVisible = false;
+            img.Margin = new Thickness(0);
             Grid.SetRow(img, inRow);
             Grid.SetColumn(img, inColumn);
             RenderOptions.SetBitmapScalingMode(img, BitmapScalingMode.NearestNeighbor);
@@ -568,6 +577,8 @@ namespace SquibTracker
                 img.Source = bitImg;
                 img.Width = winCellSize;
                 img.Height = winCellSize;
+                img.Stretch = Stretch.Uniform;
+                img.Margin = new Thickness(0);
                 RenderOptions.SetBitmapScalingMode(img, BitmapScalingMode.NearestNeighbor);
                 if (img.Source != null)
                 {
@@ -598,6 +609,8 @@ namespace SquibTracker
                 img.Source = bitImg;
                 img.Width = winCellSize;
                 img.Height = winCellSize;
+                img.Stretch = Stretch.Uniform;
+                img.Margin = new Thickness(0);
                 RenderOptions.SetBitmapScalingMode(img, BitmapScalingMode.NearestNeighbor);
 
                 if (img.Source != null)
@@ -621,6 +634,8 @@ namespace SquibTracker
 
             onImg.Width = winCellSize;
             onImg.Height = winCellSize;
+            onImg.Stretch = Stretch.Uniform;
+            onImg.Margin = new Thickness(0);
             RenderOptions.SetBitmapScalingMode(onImg, BitmapScalingMode.NearestNeighbor);
 
             if (onImg.Source != null)
@@ -640,6 +655,8 @@ namespace SquibTracker
 
             offImg.Width = winCellSize;
             offImg.Height = winCellSize;
+            offImg.Stretch = Stretch.Uniform;
+            offImg.Margin = new Thickness(0);
             RenderOptions.SetBitmapScalingMode(offImg, BitmapScalingMode.NearestNeighbor);
 
             if (offImg.Source != null)
