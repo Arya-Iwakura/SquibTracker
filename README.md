@@ -3,7 +3,7 @@ SquibTracker is a customize-able tracker for games. It is flexible and works for
 
 Release 1.0 of SquibTracker comes with the Ultima 4 Randomizer tracker data and assets loaded as default. As the name implies, this program is used to help track your progress when playing Ultima 4 Randomizer (https://github.com/Gilmok/U4Rando).
 
-Other games supported currenty are A Link to the Past Randomizer and Ultima 9 Bingo. The tracker can be edited to support any game simply by supplying new graphics and creating a new datafile for the tracker data.
+Other games supported currently are A Link to the Past Randomizer and Ultima 9 Bingo. The tracker can be edited to support any game simply by supplying new graphics and creating a new datafile for the tracker data.
 
 ## Controls - Ultima 4
 
@@ -31,4 +31,4 @@ If you wish to adjust the text, layout, images, or functionality of the grid you
 Special thanks to Gilmok for creating the Ultima 4 Randomizer for which this tracker was designed for, which can be found at https://github.com/Gilmok/U4Rando.
 
 ## Known Issues
-- If using the mouse to rescale and not the scalefactor in the settings file, rescaling the internals of the window only works via adjusting the window width. Height is adjusted seperately but will not rescale the internals. To rescale drag left to right to get the correct size then drag up and down to fix the blank space.
+- If using the mouse to rescale and not the scalefactor in the settings file, rescaling the internals of the window only works via adjusting the window width. Height is adjusted separately but will not rescale the internals. To rescale drag left to right to get the correct size then drag up and down to fix the blank space.
